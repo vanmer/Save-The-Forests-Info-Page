@@ -27,9 +27,6 @@ h2 {
   font-weight: 400;
 }
 
-/*----------------------------------------------------------------------------*/
-/*--------------------------------- Showcase ---------------------------------*/
-/*----------------------------------------------------------------------------*/
 .showcase {
   height: 100vh;
   display: flex;
@@ -38,47 +35,45 @@ h2 {
   text-align: center;
   color: $secondary-color;
   padding: 0 1.25rem;
+
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: $primary-color url('./cover.jpg') no-repeat center
+          center/cover;
+  }
+
+  .video-container video {
+    min-width: 100%;
+      min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  .video-container:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: $third-color;
+    z-index: 2;
+  }
+
+  .content {
+    z-index: 10;
+  }
+
 }
 
-.video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: $primary-color url('./cover.jpg') no-repeat center
-		center/cover;
-}
-
-.video-container video {
-  min-width: 100%;
-	min-height: 100%;
-  object-fit: cover;
-  position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.video-container:after {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: $third-color;
-  z-index: 2;
-}
-
-.content {
-  z-index: 10;
-}
-
-/*----------------------------------------------------------------------------*/
-/*---------------------------------- Button ----------------------------------*/
-/*----------------------------------------------------------------------------*/
 .btn {
   display: inline-block;
   padding: 0.625rem 1.875rem;
@@ -88,101 +83,94 @@ h2 {
   border-radius: 0.3125rem;
   margin-top: 1.25rem;
   opacity: 0.7;
+
+  &:hover {
+    transform: scale(0.98);
+  }
 }
 
-.btn:hover {
-  transform: scale(0.98);
-}
-
-/*----------------------------------------------------------------------------*/
-/*------------------------------ Forests Section -----------------------------*/
-/*----------------------------------------------------------------------------*/
 #forests {
   padding: 2.6rem;
   margin-top: 2rem;
   text-align: center;
+
+  h1 {
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  article {
+    margin: 4rem 0 4rem 0;
+
+    p {
+        font-size: 1.1rem;
+        max-width: 650px;
+        margin: auto;
+        padding: 0 0.5rem;
+        text-align: left;
+        color: $fourth-color;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin: 1.875rem 0 0.5rem 0;
+        color: $primary-color;
+    }
+
+    h3 {
+        margin-top: 1.2rem;
+        font-size: 1.2rem;
+        color: $primary-color;
+    }
+
+    a {
+        color: $fifth-color;
+    }
+  }  
 }
 
-#forests article {
-  margin: 4rem 0 4rem 0;
-}
-
-#forests h1 {
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-}
-
-#forests article p {
-  font-size: 1.1rem;
-  max-width: 650px;
-  margin: auto;
-  padding: 0 0.5rem;
-  text-align: left;
-  color: $fourth-color;
-}
-
-#forests article h2 {
-  font-size: 1.8rem;
-  margin: 1.875rem 0 0.5rem 0;
-  color: $primary-color;
-}
-
-#forests article h3 {
-  margin-top: 1.2rem;
-  font-size: 1.2rem;
-  color: $primary-color;
-}
-
-#forests article a {
-  color: $fifth-color;
-}
-
-/*----------------------------------------------------------------------------*/
-/*----------------------------------- Footer ---------------------------------*/
-/*----------------------------------------------------------------------------*/
 .footer {
   background: $sixth-color;
   color: $seventh-color;
   font-size: 1rem;
   padding: 2rem 0 1.5rem 0;
-}
 
-.footer .footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 300;
-}
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 300;
 
-.footer .footer-inner p {
-  padding: 0.2rem 0;
-  font-size: 0.8rem;
-}
+    p {
+        padding: 0.2rem 0;
+        font-size: 0.8rem;
+    }
 
-.footer .footer-inner h2 {
-  font-size: 1.2rem;
-  padding: 0.4rem 0;
-  font-weight: 300;
-}
+    h2 {
+        font-size: 1.2rem;
+        padding: 0.4rem 0;
+        font-weight: 300;
+    }
 
-.footer .social-links {
-  display: flex;
-  flex-direction: row;
-}
+    .social-links {
+        display: flex;
+        flex-direction: row;
 
-.footer .footer-inner a {
-  margin: 0 0.5rem;
-  font-size: 2.6rem;
-  padding: 0 0.3rem;
-}
+        a {
+            margin: 0 0.5rem;
+            font-size: 2.6rem;
+            padding: 0 0.3rem;
+        }
 
-.footer .footer-inner a:hover {
-  color: $fourth-color;
+        a:hover {
+            color: $fourth-color;
+        }
+    }
+  }
 }
-
 
 @import "mobile";
