@@ -7,13 +7,13 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font-stack;
   line-height: 1.5;
 }
 
 a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 h1 {
@@ -36,7 +36,7 @@ h2 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--white-color);
+  color: $secondary-color;
   padding: 0 1.25rem;
 }
 
@@ -47,7 +47,7 @@ h2 {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: var(--primary-color) url('./cover.jpg') no-repeat center
+  background: $primary-color url('./cover.jpg') no-repeat center
 		center/cover;
 }
 
@@ -68,7 +68,7 @@ h2 {
   width: 100%;
   top: 0;
   left: 0;
-  background: var(--bg-color);
+  background: $third-color;
   z-index: 2;
 }
 
@@ -82,9 +82,9 @@ h2 {
 .btn {
   display: inline-block;
   padding: 0.625rem 1.875rem;
-  background: var(--primary-color);
-  color: var(--white-color);
-  border: 1px var(--white-color) solid;
+  background: $primary-color;
+  color: $secondary-color;
+  border: 1px $secondary-color solid;
   border-radius: 0.3125rem;
   margin-top: 1.25rem;
   opacity: 0.7;
@@ -118,31 +118,31 @@ h2 {
   margin: auto;
   padding: 0 0.5rem;
   text-align: left;
-  color: var(--black-color);
+  color: $fourth-color;
 }
 
 #forests article h2 {
   font-size: 1.8rem;
   margin: 1.875rem 0 0.5rem 0;
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 #forests article h3 {
   margin-top: 1.2rem;
   font-size: 1.2rem;
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 #forests article a {
-  color: var(--secondary-color);
+  color: $fifth-color;
 }
 
 /*----------------------------------------------------------------------------*/
 /*----------------------------------- Footer ---------------------------------*/
 /*----------------------------------------------------------------------------*/
 .footer {
-  background: var(--light-grey);
-  color: #616161;
+  background: $sixth-color;
+  color: $seventh-color;
   font-size: 1rem;
   padding: 2rem 0 1.5rem 0;
 }
@@ -181,7 +181,7 @@ h2 {
 }
 
 .footer .footer-inner a:hover {
-  color: var(--black-color);
+  color: $fourth-color;
 }
 
 
