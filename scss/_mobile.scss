@@ -1,39 +1,41 @@
-/*----------------------------------------------------------------------------*/
-/*------------------------------- Media Queries ------------------------------*/
-/*----------------------------------------------------------------------------*/
 @media screen and (max-width: 770px) {
-    #forests {
-      padding: 3.5rem;
-    }
+  #forests {
+    padding: 3.5rem;
   }
-  
-  @media screen and (max-width: 500px) {
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    line-height: 1.1;
+  }
+
+  #forests {
+    padding: 0.5rem 2.2rem;
+
     h1 {
-      line-height: 1.1;
-    }
-    #forests {
-      padding: 0.5rem 2.2rem;
-    }
-    #forests h1 {
       line-height: 1.2;
       font-size: 3rem;
       margin-bottom: 0;
     }
-    #forests article {
+
+    article {
       margin: 2.3rem 0 3rem 0;
-    }
-    #forests article h2 {
-      line-height: 1.3;
-      font-size: 1.4rem;
-      margin: 0 auto 0.7rem auto;
-      max-width: 270px;
-  
-    }
-    #forests article h3 {
-      font-size: 1.1rem;
-      margin-top: 0.9rem;
-    }
-    #forests article p {
-      padding-left: 1.2rem;
+
+      h2 {
+        line-height: 1.3;
+        font-size: 1.4rem;
+        margin: 0 auto 0.7rem auto;
+        max-width: 270px;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        margin-top: 0.9rem;
+      }
+
+      p {
+        padding-left: 1.2rem;
+      }
     }
   }
+}
